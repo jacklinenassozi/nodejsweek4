@@ -50,7 +50,7 @@ export class ContactList {
 		
 	}
 	editContact(b){
-			return b;
+			return this.list.push(b);
 	}
 
    removeContact(i){
