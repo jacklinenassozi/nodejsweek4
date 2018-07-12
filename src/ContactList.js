@@ -49,8 +49,14 @@ export class ContactList {
 		}
 		
 	}
-	editContact(b){
-			return this.list.push(b);
+	editContact(id,contact){
+		
+		  for (let i in this.list) {
+			if (this.list[i].id == id) {
+				return this.list[i].contact = contact;
+			}
+		  }
+			
 	}
 
    removeContact(i){

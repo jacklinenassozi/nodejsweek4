@@ -61,8 +61,13 @@ class ContactList {
 			return this.save(this.list);
 		}
 	}
-	editContact(b) {
-		return b;
+	editContact(id, contact) {
+
+		for (let i in this.list) {
+			if (this.list[i].id == id) {
+				return this.list[i].contact = contact;
+			}
+		}
 	}
 
 	removeContact(i) {
