@@ -24,7 +24,7 @@ app.get('/contact/:contact_id',(req,res)=>{
     app.patch('/contact/:contact_id', (req, res) => {
         console.log(my_contact_list.list[req.params.id])
         if (my_contact_list.list[req.params.id]) {
-            const item = my_contact_list.editContact(req.params.id, req.body);
+            const item = my_contact_list.editContact(req.body);
             res.status(200).send(item);
         } else {
             res.status(404).send(`The item with id ${req.params.id} was not found`);
