@@ -36,6 +36,7 @@ app.get('/contact/:contact_id', (req, res) => {
 app.patch('/contact/:contact_id', (req, res) => {
     console.log(req.body.id);
     if (req.body.id) {
+        //delete req.body.id
         const item = my_contact_list.editContact(req.params.contact_id, req.body);
         res.status(200).send(item);
     } else {
@@ -54,7 +55,7 @@ app.delete('/contact/:contact_id', (req, res) => {
     my_contact_list.removeContact(0);
     //.then(list=>res.send(list)) 
     //res.send('deleted' + req.params.contact_id)
-    res.send(my_contact_list.list);
+    res.send.status(200)(my_contact_list.list);
     console.log(my_contact_list.list);
 });
 
