@@ -65,7 +65,7 @@ class ContactList {
 
 		for (let i in this.list) {
 			if (this.list[i].id == id) {
-				return this.list[i] = contact;
+				return this.list[i].contact = contact;
 			}
 		}
 	}
